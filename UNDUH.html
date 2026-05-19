@@ -1,0 +1,240 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelompok Hosting</title>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      transition: 0.3s;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+    }
+
+    body.light {
+      background: #f1f5f9;
+      color: black;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    body.light header {
+      background: white;
+    }
+
+    header h1 {
+      color: #38bdf8;
+    }
+
+    .toggle-btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      background: #38bdf8;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero h2 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      max-width: 700px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    body.light .hero p {
+      color: #334155;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .title h3 {
+      font-size: 40px;
+      color: #38bdf8;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      animation: up 1s ease;
+    }
+
+    body.light .card {
+      background: white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .card h4 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    body.light .card p {
+      color: #334155;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      color: #94a3b8;
+      margin-top: 40px;
+    }
+
+    body.light footer {
+      background: white;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes up {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+      .hero h2 {
+        font-size: 38px;
+      }
+    }
+  </style></head>
+<body>  <header>
+    <h1>Kelompok Hosting</h1><button class="toggle-btn" onclick="darkMode()">
+  Dark / Light
+</button>
+
+  </header>  <section class="hero">
+    <h2>Website <span>Kelompok</span></h2><p>
+  Website kelompok dengan animasi, dark mode, dan foto anggota.
+  Siap upload ke Netlify.
+</p>
+
+  </section>  <div class="container"><div class="title">
+  <h3>Anggota Kelompok</h3>
+</div>
+
+<div class="cards">
+
+  <div class="card">
+    <img src="frido.jpg" alt="Frido">
+    <h4>Muhamad Frido</h4>
+    <p>Belajar hosting dan pembuatan website.</p>
+  </div>
+
+  <div class="card">
+    <img src="riski.jpg" alt="Riski">
+    <h4>Mauhamad Riski</h4>
+    <p>Belajar desain dan HTML dasar.</p>
+  </div>
+
+  <div class="card">
+    <img src="zaen.jpg" alt="Zaen">
+    <h4>Ahmad Zaen</h4>
+    <p>Membantu membuat tampilan website.</p>
+  </div>
+
+  <div class="card">
+    <img src="jamal.jpg" alt="Jamal">
+    <h4>Jamaludin</h4>
+    <p>Membantu mencari referensi coding.</p>
+  </div>
+
+  <div class="card">
+    <img src="mahdiar.jpg" alt="Mahdiar">
+    <h4>Mahdiar</h4>
+    <p>Belajar coding dan hosting website.</p>
+  </div>
+
+</div>
+
+  </div>  <footer>
+    © 2026 Kelompok Hosting
+  </footer>  <script>
+    function darkMode() {
+      document.body.classList.toggle('light');
+    }
+  </script></body>
+</html>
